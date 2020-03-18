@@ -12,6 +12,9 @@ app.use(express.static("public"));
 
 
 app.use(require("./routes/index"));
+app.use(require("./routes/current"));
+app.use(require("./routes/future"));
+app.use(require("./routes/donate"));
 
 app.get("/error", (req, res) => {
   res.send("error");

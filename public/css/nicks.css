@@ -128,3 +128,10 @@ body:after {
 .btn:hover .txt-b {
   display: inline;
 }
+
+
+#form1,
+#form2,
+#form3{
+  display: none;
+}
