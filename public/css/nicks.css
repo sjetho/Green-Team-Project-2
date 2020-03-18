@@ -1,0 +1,90 @@
+
+.row{
+display: flex;
+justify-content: center;
+
+}
+
+.contain1{
+ position: relative;
+  text-align: center;
+  color: black;
+  font-size: xx-large;
+   font-family: fantasy;
+   font-weight: 800;
+   
+}
+
+.contain2{
+ position: relative;
+  text-align: center;
+  color: rgb(24, 23, 23);
+  font-size: xx-large;
+   font-family: fantasy;
+   font-weight: 800;
+}
+
+.contain3{
+ position: relative;
+  text-align: center;
+  color: black;
+  font-size: xx-large;
+  font-family: fantasy;
+  font-weight: 800;
+}
+
+.pic {
+  width: 290px;
+  border-radius: 50% 50% 50% 50%;
+  height: 290px;
+
+
+
+  flex-grow: 1;
+}
+
+body{
+    background-size: 100% 100%;
+    background-image: url('/images/house.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.space{
+padding: 100px;
+  width: 100%;
+  flex-grow: 1;
+  
+}
+
+.centerText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.glow{
+  /*Transition*/
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+
+  /*Reflection*/
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.1)));
+}
+
+
+.glow:hover {
+  opacity: 1;
+
+  /*Reflection*/
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.4)));
+
+  /*Glow*/
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
