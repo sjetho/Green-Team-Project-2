@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "dC2020!!",
+    "database": "postgres",
+    "host": " database-1.cno0np8fsfm8.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "dC2020!!",
+    "database": "postgres",
+    "host": "database-1.cno0np8fsfm8.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "dC2020!!",
+    "database": "postgres",
+    "host": "database-1.cno0np8fsfm8.us-east-2.rds.amazonaws.com",
+    "dialect": "postgres"
+  }
+}
