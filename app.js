@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// var io = require('socket.io')();
+var io = require('socket.io')();
 
 // const bodyParser = require("body-parser");
 // let auth = require("./auth");
@@ -15,7 +15,7 @@ app.use(express.static("public"));
 
 app.use(require("./routes/index"));
 app.use(require("./routes/current"));
-app.use(require("./routes/future"));
+app.use(require("./routes/api"));
 app.use(require("./routes/donate"));
 
 // app.get("/error", (req, res) => {

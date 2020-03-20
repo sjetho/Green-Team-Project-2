@@ -7,7 +7,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 router.get("/current", (req, res) => {
   // res.render('current');
-  db.query('SELECT * FROM "Items"')
+  db.query('SELECT * FROM "items"')
   .then(results => {
     //results is an array of objects
     console.log(results);
