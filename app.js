@@ -17,7 +17,7 @@ app.use(require("./routes/index"));
 app.use(require("./routes/current"));
 app.use(require("./routes/api"));
 app.use(require("./routes/donate"));
-
+app.use(require("./routes/admin"));
 // app.get("/error", (req, res) => {
 //   res.send("error");
 // });
@@ -35,3 +35,5 @@ app.use(require("./routes/donate"));
 app.listen(3500, () => {
   console.log("Listening on 3500");
 });
+
+

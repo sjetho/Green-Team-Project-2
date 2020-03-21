@@ -6,3 +6,5 @@ router.get('/admin', (req, res) => { // on "website.com/donate - display"
         pageTitle: "admin"
     });
 });
+
+module.exports = router;
