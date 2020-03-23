@@ -18,11 +18,11 @@ const index = require('./routes/index')
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(require("./", index));
+app.use(index);
 app.use(require("./routes/current"));
 app.use(require("./routes/api"));
 app.use(require("./routes/donate"));
-app.use(require("./routes/admin"));
+// app.use(require("./routes/admin"));
 app.use(require("./routes/market"));
 ////install express-session and bcrypt!!!
 app.use(session({
@@ -129,7 +129,7 @@ saveUninitialized:false////only saves if there is something to save
 
 
 
-db.Sequelize.synce().then(() => {
+db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
   console.log(`Listening on PORT: ${PORT}`);
 });

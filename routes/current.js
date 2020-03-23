@@ -12,7 +12,7 @@ router.use(bodyParser.json())
 
 ///get all items//////
 router.get("/current", (req, res) => {
-db.items.FindAll()
+db.items.findAll()
 .then(items => res.send(items))
 });
 
@@ -21,7 +21,7 @@ db.items.FindAll()
 
 ////get item by id//////
 router.get("/current/:id", (req, res) => {
-  db.items.FindAll({
+  db.items.findAll({
     where: {
       id: req.params.id
     }

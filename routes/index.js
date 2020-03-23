@@ -32,27 +32,28 @@ where:{
 }
 
   })
+  if(user){////user exists
+    ///compare the password given and checks if taken
+    bcrypt.compare(password, Users.password,(error,result) => {
+      ///if not taken then send user to market page
+      if(result){
+  if(req.session){///creates a session
+    req.session.user = {userid: Users.id}
+    res.redirect('/current')
+  }
+  ///if password is wrong
+      } else{
+        res.render('/',{message:'password/username is wrong'})
+      }
+    })
+  ///if username is wrong
+  
+  }else {
+          res.render("/", { message: "password/username is wrong" });
+  
+  }
 })
-if(user != null){////user exists
-  ///compare the password given and checks if taken
-  bcrypt.compare(password, Users.password,(error,result) => {
-    ///if not taken then send user to market page
-    if(result){
-if(req.session){///creates a session
-  req.session.user = {userid: Users.id}
-  res.redirect('/current')
-}
-///if password is wrong
-    } else{
-      res.render('/',{message:'password/username is wrong'})
-    }
-  })
-///if username is wrong
 
-}else {
-        res.render("/", { message: "password/username is wrong" });
-
-}
 
 
 
