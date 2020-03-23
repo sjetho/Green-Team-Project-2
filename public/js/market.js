@@ -10,7 +10,7 @@ $(function () {
     //   }, updateFeedback);
     // });
 
-    // $('.feedback-messages').on('click', function(e) {
+    // $('.market-messagess').on('click', function(e) {
     //     if (e.target.className == 'glyphicon glyphicon-remove') {
     //       $.ajax({
     //         url: 'api/' + e.target.id,
@@ -42,7 +42,7 @@ $(function () {
             //   }, updateFeedback);
             // });
 
-            // $('.feedback-messages').on('click', function(e) {
+            // $('.market-messagess').on('click', function(e) {
             //     if (e.target.className == 'glyphicon glyphicon-remove') {
             //       $.ajax({
             //         url: 'api/' + e.target.id,
@@ -62,19 +62,21 @@ $(function () {
                     output += '           <div class="feedback-head">';
                     output += '             <div class="feedback-title">' + item.title + ' <small class="feedback-name label label-info">' + item.name + '</small></div>';
                     output += '           </div>';
-                    output += '           <div class="feedback-message">' + item.message + '</div>';
+                    output += '           <div class="market-messages">' + item.message + '</div>';
                     output += '         </div>';
                     output += '       </div>';
                     output += '     </div>';
                 });
-                $('.feedback-messages').html(output);
+                $('.market-messagess').html(output);
             }
         });
-   <div class="feedback-message">' + item.message + '</div>';
+        
+      
+   <div class="market-messages">' + item.message + '</div>  // /change for table list 
             output += '         </div>';
             output += '       </div>';
             output += '     </div>';
         });
-        $('.feedback-messages').html(output);
+$('.market-messages').html(output);
     }
 });

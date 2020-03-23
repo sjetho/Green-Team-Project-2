@@ -40,19 +40,33 @@
             
         </div>
 
-<form id="form1" class="opacity">
+<form method="POST" id="form1" action="/current" class="opacity">
 
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">name</label>
     <div class="form-group row">
         <div class="col-sm-10">
-            <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
+            <input name="name" type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
         </div>
     </div>
+
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">username</label>
+<div class="form-group row">
+    <div class="col-sm-10">
+        <input name="username" type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
+    </div>
+</div>
+
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">address</label>
+<div class="form-group row">
+    <div class="col-sm-10">
+        <input name="address" type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
+    </div>
+</div>
 
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
     <div class="form-group row">
         <div class="col-sm-10">
-            <input type="password" class="form-control form-control-sm" id="colFormLabelSm" placeholder="password">
+            <input name="password" type="password" class="form-control form-control-sm" id="colFormLabelSm" placeholder="password">
         </div>
     </div>
 
@@ -81,27 +95,39 @@
         
             </div>
 
-<form id="form2" class="opacity">
+<form method="POST" id="form2" action="/current" class="opacity">
 
-    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
-    <div class="form-group row">
-        <div class="col-sm-10">
-            <input type="email" class="form-control form-control-sm"  placeholder="email">
-        </div>
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">username</label>
+<div class="form-group row">
+    <div class="col-sm-10">
+        <input name="username" type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
     </div>
+</div>
+
 
     <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
     <div class="form-group row">
         <div class="col-sm-10">
-            <input type="password" class="form-control form-control-sm" placeholder="password">
+            <input name="password" type="password" class="form-control form-control-sm" id="colFormLabelSm"
+                placeholder="password">
         </div>
     </div>
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
 
 </form>
 
         </div>
+
+{{#message}}
+<div class="alert alert-danger" role="alert">
+    {{message}}
+</div>
+{{/message}}
+
+
+
 
 
 
@@ -122,22 +148,24 @@
         
             </div>
 
-            <form id="form3" class="opacity">
+            <form method="POST" id="form3" action="/donate" class="opacity">
 
-             <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <input type="email" class="form-control form-control-sm"  placeholder="email">
-                </div>
-            </div>
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">username</label>
+<div class="form-group row">
+    <div class="col-sm-10">
+        <input name="username" type="text" class="form-control form-control-sm" id="colFormLabelSm" placeholder="email">
+    </div>
+</div>
 
-            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                    <input type="password" class="form-control form-control-sm"  placeholder="password">
-                </div>
-                </div>
-               
+
+<label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Password</label>
+<div class="form-group row">
+    <div class="col-sm-10">
+        <input name="password" type="password" class="form-control form-control-sm" id="colFormLabelSm"
+            placeholder="password">
+    </div>
+</div>
+
               <a href="/donate"><button type="submit" class="btn btn-primary">Submit</button></a>  
 
             </form>
@@ -146,6 +174,8 @@
 
 
     </div>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
