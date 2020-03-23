@@ -6,15 +6,36 @@ const PORT = process.env.PORT || 3500;
 const bcrypt = require('bcrypt')
 const session = require('express-session')
 const index = require('./routes/index')
-
-// const bodyParser = require("body-parser");
+const bodyParser = require("body-parser");
+const pgp = require('pg-promise')()
+const CONNECTION_STRING = 'postgres://localhost:5432/green'
 // let auth = require("./auth");
 
 
 // let sessions = require("express-session");
 // let cookieParser = require("cookie-parser");
 
+const db = pgp(CONNECTION_STRING)
 
+app.post('/index', (req, res) => {
+  let username = req.body.username
+  let password = req.body.password
+
+  db.oneOrNone('SELECT id FROM Users where username = $1', [username])
+  .then((User) => {
+    if(User){
+      res.render('register', {message: 'User name already exists!'})
+    }
+
+    else{
+      db.none('INSERT INTO Users(username,password) VALUES($1,$2)', [username,password])
+      .then(() => {
+        res.send('SUCCESS')
+      })
+    }
+
+  })
+})
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
