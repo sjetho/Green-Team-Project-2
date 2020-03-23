@@ -1,4 +1,5 @@
 'use strict';
+const db = {};
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     name: DataTypes.STRING,
@@ -12,3 +13,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return User;
 };
+
+module.exports = db;

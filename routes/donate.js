@@ -6,7 +6,7 @@ const router = express.Router();
 //     });
 // });
 // module.exports = router;
-
+let db = require('../models');
 
 
 
@@ -46,3 +46,6 @@ router.post("/donate", (req, res) => {
             res.send(err);
         });
 });
+
+
+module.exports = router;

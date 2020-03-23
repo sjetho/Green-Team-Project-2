@@ -1,4 +1,5 @@
 'use strict';
+const db = {};
 module.exports = (sequelize, DataTypes) => {
   const items = sequelize.define('items', {
     categories: DataTypes.TEXT,
@@ -9,3 +10,5 @@ module.exports = (sequelize, DataTypes) => {
   };
   return items;
 };
+
+module.exports = db;
