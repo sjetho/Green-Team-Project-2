@@ -67,14 +67,14 @@ router.post('/',async (req,res) => {
   let password = req.body.password
   let address = req.body.address
 
-  let prsistedUser = await db.Users.findOne({
+  let persistedUser = await db.Users.findOne({
 where: {
   username: username
 }
 
   })
 ///if username is not used then enter a new one///
-  if (prsistedUser == null){
+  if (persistedUser == null){
 ///added hash to encrypt password///
 bcrypt.hash(password,SALT_ROUNDS, async (error,hash) => {
   ///if error message will display
